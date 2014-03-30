@@ -12,26 +12,11 @@ import java.util.LinkedList;
  * @author Subrata
  *
  */
-public class BinaryTree<T> { 
+public class BinaryTree<T> implements IntfBTree<T> { 
 	// this is root node.
 	BTNode<T> root = null;
 	BTNode<T> levelNode = null;
 	int size;
-	
-	// Create a Node
-	class BTNode<T> {
-		T value;
-		BTNode<T> leftNode;
-		BTNode<T> rightNode;
-		
-		BTNode(T value){
-			this.value = value;
-		}
-		
-		public T getValue(){
-			return value;
-		}
-	}
 	
 	public void addNode(T value){
 		BTNode<T> newNode = new BTNode<T>(value);
