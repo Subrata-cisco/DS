@@ -9,6 +9,8 @@ package BTree;
  */
 public interface IntfBTree<T> {
 	public void addNode(T value);
-	public void preorder(BTNode<T> node);
+	public void preOrder(BTNode<T> node);
+	public void postOrder(BTNode<T> node);
+	public void inOrder(BTNode<T> node);
 	public void levelOrder(BTNode<T> node);
 }
