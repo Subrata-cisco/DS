@@ -3,6 +3,9 @@ package BTree;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import BTree.core.BTNode;
+import BTree.core.BinaryTree;
+
 public class BTLevelOrderTraversal<T> extends BinaryTree<T> {
 	
 	/**
@@ -21,12 +24,12 @@ public class BTLevelOrderTraversal<T> extends BinaryTree<T> {
 		while(temp != null){
 			System.out.println("*****************Subrata val ::"+temp.getValue());
 			
-			if(temp.leftNode != null){
-				queue.offer(temp.leftNode);
+			if(temp.getLeftNode() != null){
+				queue.offer(temp.getLeftNode());
 			}
 			
-			if(temp.rightNode != null){
-				queue.add(temp.rightNode);
+			if(temp.getRightNode() != null){
+				queue.add(temp.getRightNode());
 			}
 			
 			temp = queue.poll();

@@ -1,4 +1,4 @@
-package BTree;
+package BTree.core;
 
 
 /**
@@ -19,4 +19,14 @@ public class BTNode<T> {
 	public T getValue() {
 		return value;
 	}
+
+	public BTNode<T> getLeftNode() {
+		return leftNode;
+	}
+
+	public BTNode<T> getRightNode() {
+		return rightNode;
+	}
+	
+	
 }

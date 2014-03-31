@@ -1,4 +1,5 @@
-package BTree;
+package BTree.core;
+
 
 /**
  * Idea : No need to check if lesser than left or else right side etc. Keep
