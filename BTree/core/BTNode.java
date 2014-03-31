@@ -27,6 +27,4 @@ public class BTNode<T> {
 	public BTNode<T> getRightNode() {
 		return rightNode;
 	}
-	
-	
 }

@@ -13,13 +13,14 @@ public class BTLevelOrderTraversal<T> extends BinaryTree<T> {
 	 * @param node
 	 */
 	public void levelOrder(BTNode<T> node){
-		Queue<BTNode<T>> queue = new LinkedList<BTNode<T>>();
+		
 		
 		if(node == null){
 			return;
 		}
 		
 		BTNode<T> temp=node;
+		Queue<BTNode<T>> queue = new LinkedList<BTNode<T>>();
 		
 		while(temp != null){
 			System.out.println("*****************Subrata val ::"+temp.getValue());
@@ -29,7 +30,7 @@ public class BTLevelOrderTraversal<T> extends BinaryTree<T> {
 			}
 			
 			if(temp.getRightNode() != null){
-				queue.add(temp.getRightNode());
+				queue.offer(temp.getRightNode());
 			}
 			
 			temp = queue.poll();
