@@ -11,7 +11,8 @@ import BTree.core.BinaryTree;
  * how the items are distributed , so do a level order traverse and 
  * find the max.
  * TODO - write recursive version of the algorithm with out extra space.
- * @author Subrata
+ * 
+ * @author Subrata Saha
  *
  * @param <T>
  */
