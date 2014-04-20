@@ -17,9 +17,9 @@ package arrays;
 public class PrintMatrixSpiral {
 	public static void main(String[] args) {
 
-		int[][] matrix1 = { { 3, 4, 5, 6, 2, 5 }, { 2, 4, 6, 2, 5, 7 },
+		/*int[][] matrix1 = { { 3, 4, 5, 6, 2, 5 }, { 2, 4, 6, 2, 5, 7 },
 				{ 2, 5, 7, 8, 9, 3 }, { 2, 4, 7, 3, 5, 8 },
-				{ 6, 4, 7, 3, 5, 7 } };
+				{ 6, 4, 7, 3, 5, 7 } };*/
 
 		int[][] matrix = { { 1, 2, 3, 4 }, { 5, 6, 7, 8 }, { 9, 10, 11, 12 },
 				{ 13, 14, 15, 16 } };

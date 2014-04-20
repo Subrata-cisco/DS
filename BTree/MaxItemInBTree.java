@@ -1,10 +1,10 @@
-package BTree;
+package btree;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-import BTree.core.BTNode;
-import BTree.core.BinaryTree;
+import btree.core.BTNode;
+import btree.core.BinaryTree;
 
 /**
  * We have traverse the entire tree to check as there is no gurentee 

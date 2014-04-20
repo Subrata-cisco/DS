@@ -1,4 +1,4 @@
-package BTree.core;
+package btree.core;
 
 
 /**

@@ -13,9 +13,9 @@ package arrays;
  */
 public class LargestSumSubArray {
 	public static void main(String[] args) {
-		int[] arr1 = { 4, 3, -5, 0, 6, -8, 12, 3, -9, 2, 5, 8, -3, 4, 8, 0, 3,
+		/*int[] arr1 = { 4, 3, -5, 0, 6, -8, 12, 3, -9, 2, 5, 8, -3, 4, 8, 0, 3,
 				-3, -5, -9, 4, 2 };
-		int[] arr2 = {-2,-3,4,-1,-2,1,5,-3};
+		int[] arr2 = {-2,-3,4,-1,-2,1,5,-3};*/
 		int[] arr = {-1,2,-3,4,-5,6,-7,9,-8};
 		maxSumSubArray(arr);
 		//System.out.println(maxSubArraySum(arr));

@@ -19,10 +19,10 @@ public class FindRepetitionWithoutExtraSpace {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		int[][] arr1 = { { 8, 12, 13, 16, 17, 22, 24, 29 },
+		/*int[][] arr1 = { { 8, 12, 13, 16, 17, 22, 24, 29 },
 				{ 4, 8, 14, 16, 18, 23 }, { 33, 36, 37, 44, 95, 126 },
 				{ 5, 7, 15, 18 } };
-		
+		*/
 		int[][] arr = { { 2,4,6,8 },
 				{ 3,7,9,10 }, { 6,7,10,12 } };
 				
