@@ -1,4 +1,4 @@
-package com.subrata.misc;
+package com.subrata.challenging;
 
 public class Knapsack {
 	static int max(int a, int b) {
