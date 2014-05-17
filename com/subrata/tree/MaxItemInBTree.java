@@ -1,10 +1,10 @@
-package com.subrata.btree;
+package com.subrata.tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-import com.subrata.btree.core.BTNode;
-import com.subrata.btree.core.BinaryTree;
+import com.subrata.tree.core.BinaryTree;
+import com.subrata.tree.core.TNode;
 
 
 /**
@@ -20,14 +20,14 @@ import com.subrata.btree.core.BinaryTree;
 public class MaxItemInBTree<T> extends BinaryTree<T> {
 
 	
-	public void maxItem(BTNode<T> node){
+	public void maxItem(TNode<T> node){
 		
 		if(node == null){
 			return;
 		}
 		
-		BTNode<T> temp = node;
-		Queue<BTNode<T>> queue = new LinkedList<BTNode<T>>();
+		TNode<T> temp = node;
+		Queue<TNode<T>> queue = new LinkedList<TNode<T>>();
 		Integer max = -1;
 		
 		while(temp != null){
