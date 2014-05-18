@@ -45,7 +45,9 @@ public class BinarySearchTree<T extends Comparable<T>> implements ITree<T> {
 		}else {
 			System.out.println("Neglecting the already inserted value ::"+value);
 		}
-		
-		
+	}
+	
+	public int getSize(){
+		return size;
 	}
 }

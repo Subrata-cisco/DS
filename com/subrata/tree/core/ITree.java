@@ -1,5 +1,8 @@
 package com.subrata.tree.core;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 
 /**
  * Operation on BTree.
@@ -43,5 +46,33 @@ public interface ITree<T> {
 		inOrder(node.leftNode);
 		System.out.println("***************** Inorder value is ::" + node.getValue());
 		inOrder(node.rightNode);
+	}
+	
+	default void levelOrder(TNode<T> node){
+		
+		if(node == null){
+			return;
+		}
+		
+		TNode<T> temp=node;
+		Queue<TNode<T>> queue = new LinkedList<TNode<T>>();
+		StringBuilder sb = new StringBuilder();
+		
+		while(temp != null){
+			sb.append(temp.getValue()).append("->");
+			
+			if(temp.getLeftNode() != null){
+				queue.offer(temp.getLeftNode());
+			}
+			
+			if(temp.getRightNode() != null){
+				queue.offer(temp.getRightNode());
+			}
+			
+			temp = queue.poll();
+		}
+		
+		System.out.println("*****************Subrata val ::"+sb.toString());
+
 	}
 }
