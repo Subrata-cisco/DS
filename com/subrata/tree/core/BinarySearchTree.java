@@ -37,9 +37,11 @@ public class BinarySearchTree<T extends Comparable<T>> implements ITree<T> {
 		
 		// once inserted node is found put it in left or right.
 		if(newNode.value.compareTo(prev.value) < 0){
+			newNode.setParenNode(prev);
 			prev.leftNode = newNode ;
 			size ++ ;
 		}else if(newNode.value.compareTo(prev.value) > 0){
+			newNode.setParenNode(prev);
 			prev.rightNode = newNode ;
 			size ++ ;
 		}else {

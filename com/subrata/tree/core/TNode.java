@@ -6,10 +6,13 @@ package com.subrata.tree.core;
  * @param <T>
  */
 public class TNode<T>  {
+	
 	T value;
+	boolean visited;
 	TNode<T> leftNode;
 	TNode<T> rightNode;
-	boolean visited;
+	TNode<T> parenNode;
+	
 
 	TNode(T value) {
 		this.value = value;
@@ -31,6 +34,10 @@ public class TNode<T>  {
 		return visited;
 	}
 	
+	public TNode<T> getParenNode() {
+		return parenNode;
+	}
+	
 	public void setVisited(boolean visited){
 		this.visited = visited;
 	}
@@ -45,6 +52,15 @@ public class TNode<T>  {
 
 	public void setRightNode(TNode<T> rightNode) {
 		this.rightNode = rightNode;
+	}
+
+	public void setParenNode(TNode<T> parenNode) {
+		this.parenNode = parenNode;
+	}
+
+	@Override
+	public String toString() {
+		return "TNode [value=" + value + "]";
 	}
 	
 }

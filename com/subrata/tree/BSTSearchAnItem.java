@@ -11,12 +11,12 @@ import com.subrata.tree.core.TNode;
 public class BSTSearchAnItem<T extends Comparable<T>> extends
 		BinarySearchTree<T> {
 
-	public boolean searchWithRecursion(TNode<T> node, T data){
+	public TNode<T> searchWithRecursion(TNode<T> node, T data){
 		if(node == null){
-			return false;
+			return null;
 		}else{
 			if(node.getValue().compareTo(data) == 0){
-				return true;
+				return node;
 			}else if (node.getValue().compareTo(data) > 0){
 				return searchWithRecursion(node.getLeftNode(),data);
 			} else {
@@ -53,11 +53,11 @@ public class BSTSearchAnItem<T extends Comparable<T>> extends
 		obj.addNode(22);
 		
 		
-		boolean found = obj.searchWithRecursion(obj.root,8);
-		System.out.println("****** Subrata ->  Search number 8 recursively :: found ::"+found);
+		TNode<Integer> nodeFound = obj.searchWithRecursion(obj.root,8);
+		System.out.println("****** Subrata ->  Search number 8 recursively :: found ::"+(nodeFound != null));
 		
 		
-		found = obj.searchWithOutRecursion(obj.root,8);
+		boolean found = obj.searchWithOutRecursion(obj.root,8);
 		System.out.println("****** Subrata ->  Search number 8 non recursively :: found ::"+found);
 
 	}
