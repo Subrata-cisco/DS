@@ -2,7 +2,15 @@ package com.subrata.tree;
 
 import com.subrata.tree.core.BinarySearchTree;
 import com.subrata.tree.core.TNode;
-
+/**
+ * Max Item in Binary Search Tree.
+ * Fundamental : The right most item is the highest item, if right item is null then root is highest item.
+ * But the above shall be done iteratively.
+ * 
+ * @author Subrata Saha.
+ *
+ * @param <T>
+ */
 public class BSTMaxItem<T extends Comparable<T>> extends BinarySearchTree<T> {
 
 	public TNode<T> findMaxItem(TNode<T> start){

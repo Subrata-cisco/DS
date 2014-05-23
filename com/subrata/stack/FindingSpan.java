@@ -49,7 +49,7 @@ public class FindingSpan {
 	}
 	
 	public static void main(String[] args) {
-		//printSpan();
-		printSpanUsingStack();
+		printSpan();
+		//printSpanUsingStack();
 	}
 }

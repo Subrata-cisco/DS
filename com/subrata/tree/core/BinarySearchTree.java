@@ -17,6 +17,7 @@ public class BinarySearchTree<T extends Comparable<T>> implements ITree<T> {
 		if(root == null){
 			root = newNode;
 			size ++ ;
+			//System.out.println("****** Subrata -> root ::"+newNode.getValue());
 			return;
 		}
 		
@@ -39,13 +40,15 @@ public class BinarySearchTree<T extends Comparable<T>> implements ITree<T> {
 		if(newNode.value.compareTo(prev.value) < 0){
 			newNode.setParenNode(prev);
 			prev.leftNode = newNode ;
+			//System.out.println("****** Subrata ->  "+prev.getValue()+" left child is "+newNode.getValue());
 			size ++ ;
 		}else if(newNode.value.compareTo(prev.value) > 0){
 			newNode.setParenNode(prev);
 			prev.rightNode = newNode ;
+			//System.out.println("****** Subrata ->  "+prev.getValue()+" right child is "+newNode.getValue());
 			size ++ ;
 		}else {
-			System.out.println("Neglecting the already inserted value ::"+value);
+			//System.out.println("Neglecting the already inserted value ::"+value);
 		}
 	}
 	
