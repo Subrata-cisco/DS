@@ -2,22 +2,22 @@ package com.subrata.linkedlist;
 
 public class ReverseInPairs<T> extends SLL<T> {
 
-	public Node<T> reverseInPairsSLL(Node<T> headd, int no ){
-		Node<T> current = headd;
+	public Node<T> reverseInPairsSLL(Node<T> head, int no ){
+		Node<T> temp = head;
 		Node<T> prev = null;
 		Node<T> next = null;
 		int count = 0;
 		
-		while(current != null && count < no){
-			next = current.next;
-			current.next = prev;
-			prev = current;
-			current = next;
+		while(temp != null && count < no){
+			next = temp.next;
+			temp.next = prev;
+			prev = temp;
+			temp = next;
 			count++;
 		}
 		
 		if(next != null){
-			headd.next = reverseInPairsSLL(next,no);
+			head.next = reverseInPairsSLL(next,no);
 		}
 		
 		return prev;

@@ -1,8 +1,7 @@
-package com.subrata.challenging;
-
+package com.subrata.sorting;
 /**
  * 
- * @author subratas
+ * @author Subratas
  *
  */
 public class MergeSort {
@@ -10,8 +9,8 @@ public class MergeSort {
 	/**
 	 * 1) copy the entire array into a arry object.
 	 * 2) partiation the 2 sorted arrays in the same array such that
-	 *   hl= starting pointer of first sorted array.
-	 *   hr= starting point of the second sorted array.
+	 *    hl= starting pointer of first sorted array.
+	 *    hr= starting point of the second sorted array.
 	 * 
 	 * 
 	 * @param array
@@ -21,8 +20,8 @@ public class MergeSort {
 	 */
 	public static void merge(int[] array ,int low,int mid, int high){
 		
-		int helperLeft = low;
-		int helperRight = mid+1;
+		int leftPtr = low;
+		int rightPtr = mid+1;
 		int current = low;
 		
 		int[] resultantArray = new int[array.length];
@@ -32,21 +31,21 @@ public class MergeSort {
 		}
 		
 		// compare the common length elts from both the arrays and merge them.
-		while(helperLeft<=mid && helperRight<=high){
-			if(resultantArray[helperLeft]<=resultantArray[helperRight]){
-				array[current] = resultantArray[helperLeft];
-				helperLeft++;
+		while(leftPtr<=mid && rightPtr<=high){
+			if(resultantArray[leftPtr]<=resultantArray[rightPtr]){
+				array[current] = resultantArray[leftPtr];
+				leftPtr++;
 			}else{
-				array[current] = resultantArray[helperRight];
-				helperRight++;
+				array[current] = resultantArray[rightPtr];
+				rightPtr++;
 			}
 			current++;
 		}
 		// copy only the left over from left side to the target array.
 		// because the entire array is already copied in array , so right most things will always be there, no need to copy.
-		int remaining = mid - helperLeft;
+		int remaining = mid - leftPtr;
 		for(int j=0;j<=remaining;j++){
-			array[current+j] = resultantArray[helperLeft+j];
+			array[current+j] = resultantArray[leftPtr+j];
 		}
 		print(array);
 	}

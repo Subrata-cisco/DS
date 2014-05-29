@@ -1,21 +1,30 @@
 package com.subrata.stack;
-
+/**
+ * Simple Stack implementation using Linked node.
+ * @author Subrata Saha.
+ *
+ * @param <T>
+ */
 public class Stack<T extends Comparable<T>> implements IStack<T> {
 
-	SNode<T> top = null;
+	LinkedNode<T> top = null;
 	
-	class SNode<K> {
+	class LinkedNode<K> {
 		K val;
-		SNode<K> next;
+		LinkedNode<K> next;
 		
-		SNode(K val){
+		LinkedNode(K val){
 			this.val = val;
 		}
 	}
 	
+	public boolean isEmpty(){
+		return top == null;
+	}
+	
 	@Override
 	public void push(T val) {
-		SNode<T> node = new SNode<T>(val);
+		LinkedNode<T> node = new LinkedNode<T>(val);
 		node.next = top;
 		top = node;
 	}
@@ -27,19 +36,18 @@ public class Stack<T extends Comparable<T>> implements IStack<T> {
 			System.out.println("****** Subrata -> Stack is empty !!");
 			return returnVal;
 		}else{
-			SNode<T> temp = top;
+			LinkedNode<T> temp = top;
 			returnVal = temp.val;
 			top = top.next;
-			//temp.next = null;
 			temp = null;
 		}
-		System.out.println("****** Subrata -> popped value ::"+returnVal);
+		//System.out.println("****** Subrata -> popped value ::"+returnVal);
 		return returnVal;
 	}
 	
 	public void display(){
 		StringBuilder sb = new StringBuilder();
-		SNode<T> node = top;
+		LinkedNode<T> node = top;
 		while(node!= null){
 			sb.append(node.val).append("->");
 			node = node.next;

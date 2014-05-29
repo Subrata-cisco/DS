@@ -21,7 +21,7 @@ public class BSTMirrorTreeRecursive<T extends Comparable<T>> extends
 
 		TNode<T> tmp = node.getLeftNode();
 		node.setLeftNode(node.getRightNode());
-		node.setLeftNode(tmp);  
+		node.setRightNode(tmp);  
 
 	}
 	

@@ -4,8 +4,6 @@ import java.util.NoSuchElementException;
 
 import com.subrata.linkedlist.intf.IList;
 
-
-
 /**
  * Linked list impl.
  * 
@@ -19,7 +17,7 @@ public class SLL<T> implements IList<T> {
 	protected Node<T> head;
 	protected Node<T> tail;
 
-	protected class Node<T> {
+	protected class Node<K> {
 		T item;
 		Node<T> next;
 
