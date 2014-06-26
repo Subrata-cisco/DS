@@ -69,7 +69,7 @@ public class FindingSpan {
 	
 	
 	public static void main(String[] args) {
-		//printSpan();
-		calculateSpan();
+		printSpan();
+		//calculateSpan();
 	}
 }

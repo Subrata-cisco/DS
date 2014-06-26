@@ -20,6 +20,7 @@ public class ThreeWayPartitioning {
 		int mid = 0;
 
 		while (mid <= hi) {
+			System.out.println("****** Subrata -> mid ::"+mid+" hi ::"+hi+" a[mid] ::"+a[mid]);
 			switch (a[mid]) {
 			case 0:
 				swap(lo++, mid++ , a);
@@ -36,6 +37,7 @@ public class ThreeWayPartitioning {
 	}
 
 	void swap(int low, int hi , int[] a) {
+		//System.out.println("****** Subrata -> swap a[low] ::"+a[low]+" with a[hi]"+a[hi] +" low ::"+low+" hi ::"+hi);
 		int temp = a[low];
 		a[low] = a[hi];
 		a[hi] = temp;

@@ -10,7 +10,7 @@ public class KthLargestSortedMatrix {
 		int[][] matrix = { { 5, 7, 8, 9 }, { 6, 9, 11, 13 }, { 7, 11, 12, 14 },
 				{ 8, 13, 16, 17 } };
 		printMatrix(matrix);
-		int result = findKthLargest(matrix, 2);
+		int result = findKthLargest(matrix, 3);
 		System.out.println("Result ::"+result);
 	}
 	

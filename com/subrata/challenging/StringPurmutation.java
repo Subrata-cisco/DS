@@ -11,7 +11,7 @@ public class StringPurmutation {
 
 	public static void main(String[] args) {
 		String string ="abc";
-		ArrayList<String> perm = getPermutaion(string);
+		/*ArrayList<String> perm = getPermutaion(string);
 		StringBuilder sb = new StringBuilder();
 		for(String perString : perm ){
 			if(sb.length() > 0){
@@ -19,7 +19,22 @@ public class StringPurmutation {
 			}
 			sb.append(perString);
 		}
-		System.out.println("*************** Subrata permutaion of ::"+string+" is :: "+sb.toString());
+		System.out.println("*************** Subrata permutaion of ::"+string+" is :: "+sb.toString());*/
+		
+		permutation("","abc");
+	}
+	
+	private static void permutation(String prefix, String str) {
+		int n = str.length();
+		if (n == 0)
+			System.out.println(prefix);
+		else {
+			for (int i = 0; i < n; i++){
+				//System.out.println("****** Subrata -> prefix ::"+prefix+" str ::"+str);
+				permutation(prefix + str.charAt(i),
+						str.substring(0, i) + str.substring(i + 1, n));
+			}
+		}
 	}
 	
 	/**

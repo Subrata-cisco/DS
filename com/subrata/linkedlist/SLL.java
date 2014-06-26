@@ -87,41 +87,32 @@ public class SLL<T> implements IList<T> {
 		}
 	}
 	
+	
 	public void createAll012List(){
-		add((T)new Integer(2));
-		add((T)new Integer(1));
-		add((T)new Integer(2));
-		add((T)new Integer(1));
-		add((T)new Integer(1));
-		add((T)new Integer(2));
 		add((T)new Integer(0));
+		add((T)new Integer(2));
+		add((T)new Integer(2));
+		add((T)new Integer(1));
+		add((T)new Integer(1));
 		add((T)new Integer(1));
 		add((T)new Integer(0));
+		add((T)new Integer(0));
+		add((T)new Integer(2));
+	} 
+	
+	public void createList(){
+		add((T)new Integer(1));
+		add((T)new Integer(2));
+		add((T)new Integer(3));
+		add((T)new Integer(4));
+		add((T)new Integer(5));
+		add((T)new Integer(6));
+		add((T)new Integer(7));
+		add((T)new Integer(8));
+		add((T)new Integer(9));
 	}
 
-	public void createList() {
-		T number1 = (T) new Integer(1);
-		T number2 = (T) new Integer(2);
-		T number3 = (T) new Integer(3);
-		T number4 = (T) new Integer(4);
-		T number5 = (T) new Integer(5);
-		T number6 = (T) new Integer(6);
-		T number7 = (T) new Integer(7);
-		T number8 = (T) new Integer(8);
-		T number9 = (T) new Integer(9);
-		T number10 = (T) new Integer(10);
-
-		add(number1);
-		add(number2);
-		add(number3);
-		add(number4);
-		add(number5);
-		add(number6);
-		add(number7);
-		add(number8);
-		add(number9);
-		add(number10);
-	}
+	
 	
 	public void destroyList(){
 		for(int i=0;i<10;i++)
@@ -138,8 +129,19 @@ public class SLL<T> implements IList<T> {
 	}
 
 	public static void main(String[] args) {
-		SLL sll = new SLL();
-		sll.createList();
+		SLL<Integer> sll = new SLL<Integer>();
+		
+		/*sll.add(1);
+		sll.add(2);
+		sll.add(3);
+		sll.add(4);
+		sll.add(5);
+		sll.add(6);
+		sll.add(7);
+		sll.add(8);
+		sll.add(9);
+		sll.add(10);*/
+		
 		sll.printList();
 		sll.destroyList();
 	}

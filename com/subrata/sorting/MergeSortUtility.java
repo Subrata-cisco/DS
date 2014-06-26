@@ -4,7 +4,7 @@ package com.subrata.sorting;
  * @author Subratas
  *
  */
-public class MergeSort {
+public class MergeSortUtility {
 
 	/**
 	 * 1) copy the entire array into a arry object.
@@ -47,7 +47,7 @@ public class MergeSort {
 		for(int j=0;j<=remaining;j++){
 			array[current+j] = resultantArray[leftPtr+j];
 		}
-		print(array);
+		//print(array);
 	}
 	
 	public static void mergeSort(int[] array,int low, int high){
@@ -68,7 +68,7 @@ public class MergeSort {
 		//merge(array, 0, 4, array.length-1);
 	}
 
-	private static void print(int[] c){
+	public static void print(int[] c){
 		StringBuilder sb= new StringBuilder();
 		for(int number : c){
 			sb.append("->"+number);

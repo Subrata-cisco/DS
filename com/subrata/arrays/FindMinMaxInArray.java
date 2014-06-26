@@ -20,7 +20,7 @@ public class FindMinMaxInArray {
 		for (; i < arr.length / 2; i++) {
 			int num1 = arr[i * 2];
 			int num2 = arr[i * 2 + 1];
-			System.out.println("*************Subrata no ["+(i*2)+","+(i*2 +1)+" num1 ::"+num1+" num2 ::"+num2);
+			System.out.println("*************Subrata no ["+(i*2)+"],"+(i*2 +1)+" num1 ::"+num1+" num2 ::"+num2);
 			if (arr[i * 2] >= arr[i * 2 + 1]) {
 				if (num1 > max)
 					max = num1;
