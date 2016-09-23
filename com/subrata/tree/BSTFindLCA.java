@@ -39,7 +39,6 @@ public class BSTFindLCA<T extends Comparable<T>> extends BinarySearchTree<T> {
 			System.out.println("****** Subrata -> Root null");
 			return null;
 		}
-		System.out.println("****** Subrata -> Incoming ::"+root.getValue());
 
 		// If either n1 or n2 matches with root's key, report
 		// the presence by returning root (Note that if a key is
@@ -51,12 +50,12 @@ public class BSTFindLCA<T extends Comparable<T>> extends BinarySearchTree<T> {
 			return root;
 		}
 
-		System.out.println("****** Subrata -> 111111");
+		//System.out.println("****** Subrata -> will check left and right node of ::"+root.getValue());
 		// Look for keys in left and right subtrees
 		TNode<T> left_lca = findLeastCommonAncestor1(root.getLeftNode(), n1, n2);
-		System.out.println("****** Subrata -> 222222");
+		//System.out.println("****** Subrata -> left node searching done..of "+root.getValue());
 		TNode<T> right_lca = findLeastCommonAncestor1(root.getRightNode(), n1, n2);
-		System.out.println("****** Subrata -> 3333333");
+		//System.out.println("****** Subrata -> right node searching done of .."+root.getValue());
 
 		// If both of the above calls return Non-NULL, then one key
 		// is present in once subtree and other is present in other,
@@ -65,27 +64,10 @@ public class BSTFindLCA<T extends Comparable<T>> extends BinarySearchTree<T> {
 			System.out.println("****** Subrata -> left ::"+left_lca.getValue()+" right ::"+right_lca.getValue());
 			return root;
 		}
-		
-		//if ((left_lca != null && right_lca == null) || (right_lca != null && left_lca == null))
-			//return null;
-        if(left_lca != null){
-        	System.out.println("****** Subrata -> left_lca :"+left_lca.getValue());
-        }
-        
-        if(right_lca != null){
-        	System.out.println("****** Subrata -> right_lca :"+right_lca.getValue());
-        }
-        
         
 		// Otherwise check if left subtree or right subtree is LCA
         TNode<T> node = (left_lca != null) ? left_lca : right_lca;
-        if(node != null){
-        System.out.println("****** Subrata -> Finally returned ::"+node.getValue());
-        }else {
-        	System.out.println("****** Subrata -> finall returning null");
-        }
-        System.out.println("********************************* Subrata -> *************************************");
-		return node;
+  		return node;
 	}
 	
 	public static void main(String[] args) {
@@ -98,7 +80,7 @@ public class BSTFindLCA<T extends Comparable<T>> extends BinarySearchTree<T> {
 		obj.addNode(17);
 		obj.addNode(22);
 		
-		TNode<Integer> ancestor = obj.findLeastCommonAncestor1(obj.root,142,262);
+		TNode<Integer> ancestor = obj.findLeastCommonAncestor1(obj.root,8,22);
 		System.out.println("****** Subrata -> ancestor ::"+(ancestor != null ? ancestor.getValue() :" No common ancestor !!"));
 	}
 

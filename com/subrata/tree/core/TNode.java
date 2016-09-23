@@ -14,7 +14,7 @@ public class TNode<T>  {
 	TNode<T> parenNode;
 	
 
-	TNode(T value) {
+	public TNode(T value) {
 		this.value = value;
 	}
 

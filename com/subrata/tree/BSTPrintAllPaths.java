@@ -5,12 +5,12 @@ import java.util.Stack;
 import com.subrata.tree.core.BinarySearchTree;
 import com.subrata.tree.core.TNode;
 
-public class BTRootToLeafPaths<T extends Comparable<T>> extends BinarySearchTree<T> {
+public class BSTPrintAllPaths<T extends Comparable<T>> extends BinarySearchTree<T> {
 
 	/**
 	 * Starting from root.
 	 */
-	public void rootToLeafPath(TNode<T> start, Stack<TNode<T>> stack) {
+	public void printAllPaths(TNode<T> start, Stack<TNode<T>> stack) {
 
 		if (start == null) {
 			return;
@@ -23,8 +23,8 @@ public class BTRootToLeafPaths<T extends Comparable<T>> extends BinarySearchTree
 				System.out.println(stack.elementAt(i));
 			}
 		} else {
-			rootToLeafPath(start.getLeftNode(), stack);
-			rootToLeafPath(start.getRightNode(), stack);
+			printAllPaths(start.getLeftNode(), stack);
+			printAllPaths(start.getRightNode(), stack);
 		}
 		
 		stack.pop();
@@ -35,7 +35,7 @@ public class BTRootToLeafPaths<T extends Comparable<T>> extends BinarySearchTree
 	}
 
 	public static void main(String[] args) {
-		BTRootToLeafPaths<Integer> obj = new BTRootToLeafPaths<>();
+		BSTPrintAllPaths<Integer> obj = new BSTPrintAllPaths<>();
 		obj.addNode(16);
 		obj.addNode(12);
 		obj.addNode(8);
@@ -44,7 +44,6 @@ public class BTRootToLeafPaths<T extends Comparable<T>> extends BinarySearchTree
 		obj.addNode(20);
 		obj.addNode(22);
 		Stack<TNode<Integer>> stack = new Stack<>();
-		obj.rootToLeafPath(obj.root, stack);
+		obj.printAllPaths(obj.root, stack);
 	}
 }
-
