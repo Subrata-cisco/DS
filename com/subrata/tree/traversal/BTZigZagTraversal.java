@@ -1,4 +1,4 @@
-package com.subrata.tree;
+package com.subrata.tree.traversal;
 
 import com.subrata.tree.core.BinaryTree;
 import com.subrata.tree.core.TNode;

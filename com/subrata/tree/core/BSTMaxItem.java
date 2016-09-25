@@ -1,7 +1,5 @@
-package com.subrata.tree;
+package com.subrata.tree.core;
 
-import com.subrata.tree.core.BinarySearchTree;
-import com.subrata.tree.core.TNode;
 /**
  * Max Item in Binary Search Tree.
  * Fundamental : The right most item is the highest item, if right item is null then root is highest item.

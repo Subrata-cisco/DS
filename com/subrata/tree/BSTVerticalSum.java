@@ -37,12 +37,16 @@ public class BSTVerticalSum<T extends Comparable<T>> extends
 	 */
 	private void sumAndHashByHorizontalDistance(TNode<Integer> start,HashMap<Integer,Integer> map,int hd){
 		if(start == null){
+			System.out.println("Running for null ");
 			return;
+		}else{
+			System.out.println("Running for start ::"+start.getValue());
 		}
 		sumAndHashByHorizontalDistance(start.getLeftNode(),map,hd-1);
 		
 		int sum = map.get(hd) == null ? 0 : map.get(hd);
 		map.put(hd, sum+start.getValue());
+		System.out.println("sum ::"+(sum+start.getValue())+" hd ::"+hd+" strat ::"+start);
 		
 		sumAndHashByHorizontalDistance(start.getRightNode(),map,hd+1);
 	}
@@ -55,7 +59,7 @@ public class BSTVerticalSum<T extends Comparable<T>> extends
 		obj.addNode(14);
 		obj.addNode(18);
 		obj.addNode(17);
-		obj.addNode(22);
+		obj.addNode(20);
 		
 		obj.printVerticalSum(obj.root);
 	}

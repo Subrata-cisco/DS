@@ -45,4 +45,15 @@ public class BinaryTree<T> implements ITree<T> {
 		}
 		size++;
 	}
+	
+	
+	public void print(TNode<T> start){
+       if(start == null){
+    	   return;
+       }
+       
+       print(start.getLeftNode());
+       System.out.println(start.getValue());
+       print(start.getRightNode());
+	}
 }

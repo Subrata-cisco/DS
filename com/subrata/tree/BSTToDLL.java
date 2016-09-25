@@ -1,5 +1,6 @@
 package com.subrata.tree;
 
+import com.subrata.tree.core.BSTSearchAnItem;
 import com.subrata.tree.core.TNode;
 
 public class BSTToDLL<T extends Comparable<T>> extends BSTSearchAnItem<T> {
@@ -18,13 +19,13 @@ public class BSTToDLL<T extends Comparable<T>> extends BSTSearchAnItem<T> {
 		start.setRightNode(start);
 		
 		// merge root and left sub tree
-		TNode<T> head = concatenate(start,leftTree);
+		start = concatenate(start,leftTree);
 		
 		// merge root with right sub tree.
-		head = 	concatenate(head,rightTree);
+		start = 	concatenate(start,rightTree);
 		
 		//return the merged root.s
-		return head;
+		return start;
 	}
 	
     /**

@@ -19,9 +19,19 @@ public class BTRootToLeafPaths<T extends Comparable<T>> extends BinarySearchTree
 		stack.push(start);
 
 		if (isLeaf(start)) {
+			
+			// To Print Specific path whose sum is some number.
+			/*int val = stack.stream().mapToInt(i->(Integer)i.getValue()).sum();
+			if(val == 42){
+				for (int i = 0; i < stack.size(); i++) {
+					System.out.println(stack.elementAt(i));
+				}
+			}*/
+			
 			for (int i = 0; i < stack.size(); i++) {
 				System.out.println(stack.elementAt(i));
 			}
+			
 		} else {
 			rootToLeafPath(start.getLeftNode(), stack);
 			rootToLeafPath(start.getRightNode(), stack);

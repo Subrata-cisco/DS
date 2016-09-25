@@ -1,10 +1,7 @@
-package com.subrata.tree;
+package com.subrata.tree.core;
 
 import java.util.LinkedList;
 import java.util.Queue;
-
-import com.subrata.tree.core.BinaryTree;
-import com.subrata.tree.core.TNode;
 
 
 /**

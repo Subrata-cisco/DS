@@ -1,7 +1,4 @@
-package com.subrata.tree;
-
-import com.subrata.tree.core.BinarySearchTree;
-import com.subrata.tree.core.TNode;
+package com.subrata.tree.core;
 
 public class BSTSize<T extends Comparable<T>> extends BinarySearchTree<T> {
 

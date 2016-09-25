@@ -13,6 +13,7 @@ public class TNode<T>  {
 	TNode<T> rightNode;
 	TNode<T> parenNode;
 	
+	TNode<T> nextNode;
 
 	public TNode(T value) {
 		this.value = value;
@@ -56,6 +57,14 @@ public class TNode<T>  {
 
 	public void setParenNode(TNode<T> parenNode) {
 		this.parenNode = parenNode;
+	}
+	
+	public TNode<T> getNextNode() {
+		return nextNode;
+	}
+
+	public void setNextNode(TNode<T> nextNode) {
+		this.nextNode = nextNode;
 	}
 
 	@Override

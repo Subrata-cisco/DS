@@ -1,7 +1,5 @@
-package com.subrata.tree;
+package com.subrata.tree.core;
 
-import com.subrata.tree.core.BinarySearchTree;
-import com.subrata.tree.core.TNode;
 /**
  * Searching an Item in binary search Tree
  * @author Subrata Saha.
@@ -11,7 +9,7 @@ import com.subrata.tree.core.TNode;
 public class BSTSearchAnItem<T extends Comparable<T>> extends
 		BinarySearchTree<T> {
 
-	public TNode<T> searchWithRecursion(TNode<T> node, T data){
+	public TNode<T> searchWithRecursion(TNode<T> node, T data){ 
 		if(node == null){
 			return null;
 		}else{

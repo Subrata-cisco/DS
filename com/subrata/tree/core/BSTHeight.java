@@ -1,7 +1,5 @@
-package com.subrata.tree;
+package com.subrata.tree.core;
 
-import com.subrata.tree.core.BinarySearchTree;
-import com.subrata.tree.core.TNode;
 /**
  * TBD- Need to fix !!
  * @author Subrata Saha.

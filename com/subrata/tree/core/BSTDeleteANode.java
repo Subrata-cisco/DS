@@ -1,6 +1,4 @@
-package com.subrata.tree;
-
-import com.subrata.tree.core.TNode;
+package com.subrata.tree.core;
 
 public class BSTDeleteANode<T extends Comparable<T>> extends BSTSearchAnItem<T> {
 
@@ -11,6 +9,7 @@ public class BSTDeleteANode<T extends Comparable<T>> extends BSTSearchAnItem<T> 
 		}
 		deleteNode(nodeToBeDeleted , start);
 	}
+	
 	
 	private void deleteNode(TNode<T> nodeToBeDeleted, TNode<T> start){
 		
