@@ -99,8 +99,15 @@ class Trie {
 // Testing class
 public class TrieExample {
    public static void main(String[] args) {
-        Trie dict = new Trie();        
-        dict.insert("are");
+        Trie dict = new Trie();   
+        
+        dict.insert("hack");
+        dict.insert("hackerrank");
+		
+		System.out.println("--"+dict.getMatchingPrefix("hac"));
+		System.out.println("--"+dict.getMatchingPrefix("hak"));
+		
+        /*dict.insert("are");
         dict.insert("area");
         dict.insert("base");
         dict.insert("cat");
@@ -129,6 +136,6 @@ public class TrieExample {
          
         input = "xyz";
         System.out.print(input + ":   ");
-        System.out.println(dict.getMatchingPrefix(input));                      
+        System.out.println(dict.getMatchingPrefix(input));    */                  
     }
 }

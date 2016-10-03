@@ -16,6 +16,7 @@ public class SLL<T> implements IList<T> {
 
 	protected Node<T> head;
 	protected Node<T> tail;
+	protected int size = 0;
 
 	protected class Node<K> {
 		T item;
@@ -28,6 +29,7 @@ public class SLL<T> implements IList<T> {
 
 	public void add(T item) {
 		add(item, false);
+		size++;
 	}
 
 	public void add(T item, boolean beginning) {
@@ -61,6 +63,7 @@ public class SLL<T> implements IList<T> {
 			throw new NoSuchElementException();
 		}
 		remove(false);
+		size--;
 	}
 
 	public void remove(boolean fromBeginning) {
@@ -119,13 +122,16 @@ public class SLL<T> implements IList<T> {
 			remove();
 	}
 	
-	public void printList() {
-		Node<T> temp = head;
+	public void printList(Node<T> temp) {
 		while (temp != null) {
 			System.out.print(temp.item + "->");
 			temp = temp.next;
 		}
 		System.out.println();
+	}
+	
+	public void printList() {
+		printList(head);
 	}
 
 	public static void main(String[] args) {

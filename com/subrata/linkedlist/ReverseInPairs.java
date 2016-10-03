@@ -23,6 +23,8 @@ public class ReverseInPairs<T> extends SLL<T> {
 		return prev;
 	}
 	
+	
+	
 	private void show(){
 		createList();
 		printList();

@@ -4,9 +4,25 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Trie {
+	
+	public static void main(String[] args) {
+		Trie t = new Trie();
+		//t.insert("aab");
+		//t.insert("aac");
+		//t.insert("aacghgh");
+		
+		//System.out.println("  ::"+t.search("aac"));
+		
+		t.insert("hack");
+		t.insert("hackerrank");
+		
+		System.out.println(t.prefixCount("hac"));
+		System.out.println(t.prefixCount("hak"));
+	}
 
     private class TrieNode {
         Map<Character, TrieNode> children;
+        int wordCount = 0;
         boolean endOfWord;
         public TrieNode() {
             children = new HashMap<>();
@@ -15,6 +31,7 @@ public class Trie {
     }
 
     private final TrieNode root;
+    
     public Trie() {
         root = new TrieNode();
     }
@@ -29,7 +46,10 @@ public class Trie {
             TrieNode node = current.children.get(ch);
             if (node == null) {
                 node = new TrieNode();
+                node.wordCount++;
                 current.children.put(ch, node);
+            }else{
+            	 node.wordCount++;
             }
             current = node;
         }
@@ -69,7 +89,10 @@ public class Trie {
         TrieNode current = root;
         for (int i = 0; i < word.length(); i++) {
             char ch = word.charAt(i);
+            //System.out.println("ch ::"+ch); 
             TrieNode node = current.children.get(ch);
+            //System.out.println(" current.children size ::"+current.children.size()+" node found ::"+node);
+            
             //if node does not exist for given char then return false
             if (node == null) {
                 return false;
@@ -134,5 +157,24 @@ public class Trie {
             return current.children.size() == 0;
         }
         return false;
+    }
+    
+    public int prefixCount(String word) {
+    	int count = 0;
+        TrieNode current = root;
+        for (int i = 0; i < word.length(); i++) {
+            char ch = word.charAt(i);
+            TrieNode node = current.children.get(ch);
+            
+            //if node does not exist for given char then return false
+            if (node == null) {
+                return 0;
+            }
+            current = node;
+        }
+        if(current != null){
+        	count = current.wordCount;
+        }
+        return count;
     }
 }

@@ -40,21 +40,21 @@ public class PalindromePartitioning {
 
 		// l is length, i is index of left boundary, j is index of right
 		// boundary
-		for (int l = 1; l <= length; l++) {
-			for (int i = 0; i <= length - l; i++) {
-				int j = i + l - 1;
-				System.out.println("l::"+l+"i::"+i+"j::"+j);
-				if (s.charAt(i) == s.charAt(j)) {
-					if (l == 1 || l == 2) {
-						table[i][j] = 1;
+		for (int i = 1; i <= length; i++) {
+			for (int j = 0; j <= length - i; j++) {
+				int k = j + i - 1;
+				System.out.println("i::"+i+"j::"+j+"k::"+k);
+				if (s.charAt(j) == s.charAt(k)) {
+					if (i == 1 || i == 2) {
+						table[j][k] = 1;
 					} else {
-						table[i][j] = table[i + 1][j - 1];
+						table[j][k] = table[j + 1][k - 1];
 					}
-					if (table[i][j] == 1) {
-						result.add(s.substring(i, j + 1));
+					if (table[j][k] == 1) {
+						result.add(s.substring(j, k + 1));
 					}
 				} else {
-					table[i][j] = 0;
+					table[j][k] = 0;
 					//printTable(table);
 				}
 			}
