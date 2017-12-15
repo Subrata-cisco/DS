@@ -1,4 +1,4 @@
-package com.subrata.tree;
+package com.subrata.tree.bst;
 
 import java.util.Stack;
 

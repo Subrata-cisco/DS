@@ -1,5 +1,8 @@
 package com.subrata.tree.core;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 /**
  * TBD- Need to fix !!
  * @author Subrata Saha.
@@ -23,11 +26,36 @@ public class BSTHeight<T extends Comparable<T>> extends BinarySearchTree<T> {
 		}
 	}
 	
-	/*
-	 * TBD 
-	 */
 	public int getHeightNonRecursive(TNode<T> start){
-		return -1;
+		Queue<TNode<T>> q = new LinkedList<TNode<T>>();
+		int height = 0;
+		// add root to the queue
+		q.add(root);
+		// add null as marker
+		q.add(null);
+		while (q.isEmpty() == false) {
+			TNode<T> n = q.remove();
+			// check if n is null, if yes, we have reached to the end of the
+			// current level, increment the height by 1, and add the another
+			// null as marker for next level
+			if (n == null) {
+				// before adding null, check if queue is empty, which means we
+				// have traveled all the levels
+				if(!q.isEmpty()){
+					q.add(null);
+				}
+				height++;
+			}else{
+				// else add the children of extracted node.
+				if (n.getLeftNode() != null) {
+					q.add(n.getLeftNode());
+				}
+				if (n.getRightNode() != null) {
+					q.add(n.getRightNode());
+				}
+			}
+		}
+		return height;
 	}
 	
 	public static void main(String[] args) {

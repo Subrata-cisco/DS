@@ -1,4 +1,4 @@
-package com.subrata.tree;
+package com.subrata.tree.bst;
 
 public class BSTThreaded {
 

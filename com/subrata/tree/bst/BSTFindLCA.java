@@ -1,4 +1,4 @@
-package com.subrata.tree;
+package com.subrata.tree.bst;
 
 import com.subrata.tree.core.BinarySearchTree;
 import com.subrata.tree.core.TNode;
@@ -80,7 +80,7 @@ public class BSTFindLCA<T extends Comparable<T>> extends BinarySearchTree<T> {
 		obj.addNode(17);
 		obj.addNode(22);
 		
-		TNode<Integer> ancestor = obj.findLeastCommonAncestor1(obj.root,8,22);
+		TNode<Integer> ancestor = obj.findLeastCommonAncestor1(obj.root,17,22);
 		System.out.println("****** Subrata -> ancestor ::"+(ancestor != null ? ancestor.getValue() :" No common ancestor !!"));
 	}
 
